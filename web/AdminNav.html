@@ -1,0 +1,259 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+        <title>CET</title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" type="text/css" href="./css/materialize.css">
+        <link rel="stylesheet" type="text/css" href="./css/materialize.min.css">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+        <!--META-->
+        <!-- Bootstrap CSS -->
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >-->
+        <link rel="stylesheet" href="./bo/css/bootstrap.min.css" >
+
+        <!--FONTS-->
+        <link href='https://fonts.googleapis.com/css?family=Raleway:900,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+        <!--CSS External-->
+        <link rel="stylesheet" type="text/css" href="./css/home.css">
+
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+        <!--rohit css-->
+        <link rel="stylesheet" href="./css/hj.css" >
+        <!--yash created-->
+        <link rel="stylesheet" href=./css/Css.css>
+        <script src="./js/valid.js"></script>
+        <style>
+            .M1 {
+                font-family: 'Tangerine', serif;
+                font-size: 48px;
+            }  
+        </style>
+    </head>
+    <body class="">
+        <nav class="transparent rounded" role="navigation">
+            <div class="nav-wrapper container">
+                <!--<i class="material-icons">ac_unit</i>-->
+                <a href="index.jsp" class="brand-logo active font-effect-shadow-multiple"><i><img src="./images/brainstorm.png" alt="" width="50" height="50" class="img-fluid d-inline-block align-items-xl-start"></i><span><i>TestYourSkill</i></span></a>
+
+                <ul class="right hide-on-med-and-down">
+                    <li class="text-warning">
+                        <div class="">
+                            <span class="fa fa-user fa-spin ml-1 pl-1"></span>
+                            <a class="btn mx-3 px-1" href="!#" data-toggle="modal" data-target="#profile-modal"><div class="media align-items-center">
+                                    <span class="rounded-circle">
+                                        <img alt="Image placeholder" src="./images/<%=n.getProfile()%>"  width="20" height="20">
+                                    </span>
+                                    <div class="media-body  ml-2  d-none d-lg-block">
+                                        <span class="mb-0 text-sm  font-weight-bold"><%=n.getName()%></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="modal fade" id="profile-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header text-center bg-primary">
+                                        <h5 class="modal-title text-white " id="exampleModalLabel"><%
+                                            if (n != null) {//Dynamically writes User type
+                                            if(n.getClass().getName().equals("com.tech.entities.Examinee")){
+                                            out.println("Examinee profile");
+                                            session.setAttribute("user","Examinee");
+                                            }
+                                            else if(n.getClass().getName().equals("com.tech.entities.Student")){
+                                            out.println("Student profile");
+                                            session.setAttribute("user","Student");
+                                            }
+                                            else if(n.getClass().getName().equals("com.tech.entities.Admin")){
+                                            out.println("Admin profile");
+                                            session.setAttribute("user","Admin");
+                                            }
+                                            }
+                                            %></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div id="Profile-Detail" >
+                                        <div class="modal-body">
+                                            <div class="container text-center">
+
+                                                <img src="./images/<%=n.getProfile()%>" alt="" class="img-fluid " width="100" height="100">
+
+                                                <h1 class="text-capitalize "><%=n.getName()%></h1>
+
+                                                <table class="text-primary table table-hover table-striping ">
+                                                    <tr>
+                                                        <th>User ID:</th>
+                                                        <td><%=n.getId()%></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Email Id:</th>
+                                                        <td><%=n.getEmail()%></td> 
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Gender :</th>
+                                                        <td><%=n.getGender()%></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Mobile :</th>
+                                                        <td><%=n.getMobile()%></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Education Field:</th>
+                                                        <td><%=n.getField()%></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Registration Date :</th>
+                                                        <td><%=n.getRdate()%></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>  
+
+                                    <!--profile-Edit-->
+                                    <div id="Profile-Edit" style="display:none">
+                                        <div class="text-center">
+                                            <img src="./images/<%=n.getProfile()%>" alt="" class="img-fluid " width="100" height="100">
+                                            <h1 class="text-muted text-capitalize lead"><%=n.getName()%></h1>
+                                            <h1 class="text-center text-capitalize display-6">Edit Profile Carefully</h1>
+                                        </div>
+
+                                        <form  method="post" id="edit" action="EditServ" class="form-group"  enctype="multipart/form-data" >
+                                            <table class="text-primary table table-hover table-striping ">
+                                                <tr>
+                                                    <th>User ID:</th>
+                                                    <td><input type="text" class="form-control" value="<%=n.getId()%>" name="uId" readonly="true" ></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>User Name::</th>
+                                                    <td><input type="text" class="form-control" value="<%=n.getName()%>" name="uUser" ></td> 
+                                                </tr>
+                                                <tr>
+                                                    <th>Email Id:</th>
+                                                    <td><input type="Email" class="form-control" value="<%=n.getEmail()%>" name="uEmail" ></td> 
+                                                </tr>
+                                                <tr>
+                                                    <th>Mobile:</th>
+                                                    <td><input type="tel" class="form-control" value="<%=n.getMobile()%>" name="uMob" ></td> 
+                                                </tr>
+                                                <tr>
+                                                    <th>Password :</th>
+                                                    <td><input type="Password" class="form-control" value="<%=n.getPassword()%>" name="uPass" ></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Gender :</th>
+                                                    <td><input type="gender" class="form-control" value=" <%=n.getGender()%>" name="uGender" readonly="true" ></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>profile :</th>
+                                                    <td><input type="file" class="form-control" value="<%=n.getProfile()%>" name="image" ></td>
+                                                </tr>
+
+                                            </table> 
+                                            <div class="container text-center text-capitalize">
+                                                <button type="submit" class="btn btn-outline-success">save</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" id="e-close" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary" data-toggle="modal" id="Profile-Edit-Button" data-target="#Profile-Edit" >EDIT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.jsp" class="active">Home</a></li>                                                                                                                                                                                                       
+                    <li><a href="LogoutServ">Logout</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="sidenav">
+                    <li><a href="index.jsp">Home</a></li>
+                    <li><a href="LogoutServ">Logout</a></li>
+                </ul>
+                <a href="#" data-target="#nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+         
+       
+        
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="js/materialize.js"></script>
+         <script src="js/init.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="./bo/css/bootstrap.js"></script>
+        <script src="./bo/css/bootstrap.bundle.js"></script>
+        <script src="./bo/css/bootstrap.min.js"></script>
+        <script src="./bo/css/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+                    $(document).ready(function() {
+            let profileStatus = false;
+                    $('#Profile-Edit-Button').click(function() {
+            if (profileStatus == false) {
+            $("#Profile-Detail").hide();
+                    $("#Profile-Edit").show();
+                    $("#e-close").hide();
+                    profileStatus = true;
+                    $(this).text("BACK");
+            }
+            else {
+            $("#Profile-Detail").show();
+                    $("#Profile-Edit").hide();
+                    $("#e-close").show();
+                    profileStatus = false;
+                    $(this).text("EDIT");
+            }
+            });
+            });</script>
+
+        <script>
+                    $(document).ready(function(){
+            $("#edit").submit(function(e){
+            e.preventDefault();
+                    let form = new FormData(this);
+                    $.ajax({
+                    url:"EditServ",
+                            type:"post",
+                            data:form,
+                            success:function(data, status, jqXHR){
+                            swal({
+                            title:"done",
+                                    text:"Profile updated succesfully",
+                                    icon:"success"
+                            });
+                                    console.log(data);
+                            },
+                            error:function(){
+                            swal({
+                            title:"Error!",
+                                    text:"Profile not updated",
+                                    icon:"Warning"
+                            });
+                                    console.log(data);
+                            },
+                            processData: false,
+                            contentType: false
+                    });
+            });
+            });
+        </script>
+
+    </body>
+</html>

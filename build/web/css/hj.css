@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25 Apr, 2021, 3:22:25 PM
+    Author     : DELL
+*/
+*{
+
+
+}
+body {
+    font-family: 'Montserrat';
+    font-style: Italic;
+    background-image: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    font-size:20px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        flex: 46%;
+        max-width: 46%;
+    }
+}
+
+.card {
+    opacity: 1;
+    filter: alpha(opacity=60);
+}
+.list {
+    background-image: linear-gradient(white,#7FDBFF); 
+    opacity: .8;
+    filter: alpha(opacity=60);
+}
+.card-title {
+    font-weight:bold;
+    text-align: center;
+}
+.card-text {
+    text-align: justify;
+}
+nav{
+    background-image: linear-gradient(#7FDBFF,blue); 
+}
+.card-header{
+    background-image: linear-gradient(white,#7FDBFF);
+}
+
+.dark-shadow{
+    background-color:rgba(0,0,0,0.4);
+    color:white;
+    box-shadow:5px 5px 10px grey;
+    margin: 20px;
+    padding: 20px;
+}
+
+.modal-header {
+    background-image: linear-gradient(#7FDBFF,red);
+}
+.modal-footer {
+    background-image: linear-gradient(white,#7FDBFF);
+}
+#left-panel-link {
+    position: relative;
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#right-panel-link {
+    position: absolute;
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.sep {
+    height: 25px;
+}

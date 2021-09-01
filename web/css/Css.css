@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16 Apr, 2021, 3:03:06 PM
+    Author     : DELL
+*/
+
+ 
+
+body {
+    
+     
+    background-position: center;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed; 
+    background-color:rgba(0,0,0,0.1);
+}
+#yash
+{
+    background-color:rgba(0,0,0.0.6);
+    color:white;
+    text-align:right;
+}
+#yash ul li
+{
+    display:inline-block;
+    padding:12px;
+}
+#yash ul li:hover
+{
+    background-color:rgba(60,60,60,1);
+    color:black;
+}
+#jadoun
+{
+    margin-top:50px;
+}
+table
+{
+    background-color:rgba(0,0,0,0.6);
+    color:white;
+    box-shadow:5px 5px 10px grey;
+    padding:20px;
+    border-radius:25px 25px 25px 25px;
+}
+.y
+{
+    padding:10px;
+    background-color:rgba(71,71,71,0.5);
+    color:white;
+    border-radius:15px 15px 15px 15px;
+    box-shadow:3px 3px 5px grey;
+}
+.y:hover		
+{
+    padding:10px;
+    background-color:rgba(71,71,71,1);
+    color:black;
+    border-radius:20px 20px 20px 20px;
+    box-shadow:3px 3px 5px grey;
+}
+.j
+{
+    padding:8px;
+    background-color:rgba(213,213,213,0.5);
+    color:black;
+    border-radius:10px 10px 10px 10px;
+}
+.j:hover
+{
+    padding:8px;
+    background-color:rgb(255,255,255);
+    color:black;
+    border-radius:10px 10px 10px 10px;
+}
+.jk
+{
+    color:white;
+}
+.jk:hover
+{
+    color:yellow;
+}
+.jkm
+{
+    font-size:20px;
+    color:white;
+}
+.ul
+{
+    box-shadow:5px 5px 10px grey;
+    background-color:rgba(0,0,0,0.5);
+}
+.jkm:hover
+{
+    font-size:20px;
+    color:grey;
+}
