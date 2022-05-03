@@ -35,8 +35,13 @@
          <%@include file="Normal_nav.html" %>
     </head>
     <body>
-        <h1>About us</h1>
-        <h1>we are an team of collage we made this web site for non-profitable purpose</h1>
-        <pre>its just for eduction and small initiative for collabration in education </pre>
+        <div class="container">
+        <div class="card p-4 " style="background-color: rgb(0,0,0,0.5);"> 
+        <h1 class="text-primary text-center card" style="background-color: rgb(0,0,0,0.5); border-radius:10px; ">About us</h1>
+        <h1 class=" card-body text-white">we are an team of collage we made this web site for non-profitable purpose</h1>
+        <div class="card-img text-center"><img class="img-fluid rounded-circle" src="./images/ro.png"> </div>
+        <pre class="lead text-white m-3 text-center">its just for eduction and small initiative for collaboration in education </pre>
+        </div>
+        </div>    
     </body>
 </html>

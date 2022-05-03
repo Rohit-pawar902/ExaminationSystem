@@ -3,23 +3,29 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/servlet/LogoutServ.java</file>
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/entities/Result.java</file>
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/helper/Helper.java</file>
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/entities/Examinee.java</file>
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/dao/StudentDAO.java</file>
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/entities/MockTest.java</file>
+            <file>file:/C:/Users/DELL/TestYourSkill/web/StuRegistration.jsp</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/StuTestPage.jsp</file>
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/servlet/ContactSubServ.java</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/ExamRegistration.jsp</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/ShowTestDetail.jsp</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/SETestShow.jsp</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/LoadResult.jsp</file>
+            <file>file:/C:/Users/DELL/TestYourSkill/web/js/valid.js</file>
+            <file>file:/C:/Users/DELL/TestYourSkill/web/js/init.js</file>
+            <file>file:/C:/Users/DELL/TestYourSkill/web/css/Css.css</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/ExamineeProfile.jsp</file>
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/servlet/EditServ.java</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/ContactUs.jsp</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/StuETestPage.jsp</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/AboutUs.jsp</file>
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/servlet/EDelUpdTestServ.java</file>
+            <file>file:/C:/Users/DELL/TestYourSkill/web/Profile.jsp</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/index1.html</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/EShowResult.jsp</file>
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/dao/ExamineeExaminationDAO.java</file>
@@ -32,10 +38,14 @@
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/dao/ExamineeDAO.java</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/AdminNav.html</file>
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/dao/ExaminationDAO.java</file>
+            <file>file:/C:/Users/DELL/TestYourSkill/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/entities/ExamineeMockTest.java</file>
+            <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/helper/ConnectionProvider.java</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/Login.jsp</file>
+            <file>file:/C:/Users/DELL/TestYourSkill/web/EShowTestView.jsp</file>
             <file>file:/C:/Users/DELL/TestYourSkill/web/Normal_nav.html</file>
             <file>file:/C:/Users/DELL/TestYourSkill/src/java/com/tech/entities/Feedback.java</file>
+            <file>file:/C:/Users/DELL/TestYourSkill/web/css/hj.css</file>
         </group>
     </open-files>
 </project-private>

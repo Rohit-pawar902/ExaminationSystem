@@ -93,7 +93,7 @@
                                 <span id="CN2">  </span></td>
                         </tr>
                          <tr>
-                            <td class="jk"> Check me out</td>
+                            <td class="jk">Check me out</td>
                             <td>
                                 <div class="form-check">
                                     <input type="checkbox" name="check" value="2" class="j form-check-input" id="exampleCheck1">
